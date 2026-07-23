@@ -26,8 +26,9 @@ Link to app: https://who-life-expectancy-predictor-app.streamlit.app/
 ├── .streamlit/
 │   └── config.toml                 # Streamlit theme configuration
 ├── eda-and-model-creation.ipynb    # Exploratory data analysis and model development notebook
+├── predict.py                      # Script containing CLI function (train and output prediction from the CLI)
 ├── Life Expectancy Data.csv        # WHO dataset
-├── requirements.txt                # Pinned Python dependencies
+├── requirements-dev.txt            # Pinned Python dependencies (to run notebook and CLI script locally)
 └── README.md
 ```
 
