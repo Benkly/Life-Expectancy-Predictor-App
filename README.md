@@ -4,6 +4,8 @@ A linear regression project that predicts life expectancy across countries using
 
 The project includes both a CLI prediction script and an interactive Streamlit web application.
 
+Link to app: https://who-life-expectancy-predictor-app.streamlit.app/
+
 ## Project Structure
 
 ```
