@@ -1,9 +1,13 @@
 """WHO Life Expectancy Predictor - main Streamlit app."""
 
+from pathlib import Path
+
 import joblib
 import numpy as np
 import pandas as pd
 import streamlit as st
+
+APP_DIR = Path(__file__).resolve().parent
 
 from colours import DARK, GOLD, GOLD_DARK, MOSS, SKY, UN_BLUE, WHITE, REGION_LIST
 from components import (
@@ -19,7 +23,7 @@ apply_styles()
 
 @st.cache_resource
 def load_bundle(name: str) -> dict:
-    return joblib.load(f"models/{name}.pkl")
+    return joblib.load(APP_DIR / "models" / f"{name}.pkl")
 
 
 df = load_data()

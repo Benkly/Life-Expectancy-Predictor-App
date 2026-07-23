@@ -2,16 +2,20 @@
 
 from __future__ import annotations
 
+from pathlib import Path
+
 import pandas as pd
 import streamlit as st
 
 from colours import DARK, LIGHT, UN_BLUE
 
+APP_DIR = Path(__file__).resolve().parent
+
 
 @st.cache_data
 def load_data() -> pd.DataFrame:
     """Load the WHO life expectancy dataset, cached across reruns."""
-    return pd.read_csv("Life Expectancy Data.csv")
+    return pd.read_csv(APP_DIR / "Life Expectancy Data.csv")
 
 
 def section_header(title: str, subtitle: str | None = None) -> None:
